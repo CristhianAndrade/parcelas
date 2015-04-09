@@ -96,7 +96,13 @@
 	    	jQuery('.swatch').click(function(){  
 	    		carregaParc();    		
 			}); 
-		});  
+		}); 
+		
+		jQuery('.catalog-product-view').each(function(){
+	    	jQuery('.super-attribute-select').click(function(){
+	    		carregaParc();  
+			});
+		}); 
 	});
 </script> 
 
