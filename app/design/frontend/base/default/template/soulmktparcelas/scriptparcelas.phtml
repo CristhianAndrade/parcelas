@@ -1,0 +1,103 @@
+<?php if($this->enabled() && $this->enabledCjm()): ?>
+ 
+<script type="text/javascript">
+  
+    function carregaParc() 
+    {
+    	var valor_minimo  = <?php echo $this->getMinParcelas(); ?>;
+    	var max_parcelas  = <?php echo $this->getMaxParcelas(); ?>; 
+    	var desc_boleto  = <?php if( !($this->getDescontoBoleto()) ){ echo '0'; }else{echo $this->getDescontoBoleto(); } ?>;       
+     
+    	if(jQuery(".price-box").find(".special-price").length)
+    	{
+    		var capital2 = jQuery('.price-box .special-price .price').text().replace("<?php echo $this->getSymbol() ?>", "");
+		}
+		else
+		{
+			var capital2 = jQuery('.price-box .price').text().replace("<?php echo $this->getSymbol() ?>", "");
+		}
+		
+		var capital2Desc = capital2;
+		capital2 = capital2.replace( ".", "" );		
+		capital2 = capital2.replace( ",", "." );
+		capital2 = parseFloat(capital2);
+		        
+		var nParcelas = max_parcelas ;
+		        
+		if(capital2 > valor_minimo)
+		{
+			var parcPossiveis = Math.floor(capital2 / valor_minimo);	
+		}
+		
+		else if(capital2 <= valor_minimo) 
+		{
+			var parcPossiveis = 1;
+		}
+				
+		if (parcPossiveis < nParcelas)
+		{
+			nParcelas = parcPossiveis;
+		}
+		
+		var parmaior = capital2 / nParcelas; 
+		
+		if(desc_boleto) 
+		{
+			var boleto = ( capital2 - (capital2 * (desc_boleto / 100) ));
+			jQuery(' .parcelado .boleto').html("<?php echo $this->getSymbol() ?>"+moeda(boleto, 2, ',', '.'));
+		}
+		
+		jQuery(' .parcelado .vezes').text('<?php echo $this->__('In up to'); ?>'+nParcelas+"x");
+		jQuery(' .parcelado .totalparc').html("<?php echo $this->getSymbol() ?>"+moeda(parmaior, 2, ',', '.'));
+    }
+    
+    function moeda(valor, casas, separdor_decimal, separador_milhar){ 
+ 
+	 var valor_total = parseInt(valor * (Math.pow(10,casas)));
+	 var inteiros =  parseInt(parseInt(valor * (Math.pow(10,casas))) / parseFloat(Math.pow(10,casas)));
+	 var centavos = parseInt(parseInt(valor * (Math.pow(10,casas))) % parseFloat(Math.pow(10,casas)));
+	 
+	  
+	 if(centavos%10 == 0 && centavos+"".length<2 ){
+	  centavos = centavos+"0";
+	 }else if(centavos<10){
+	  centavos = "0"+centavos;
+	 }
+	  
+	 var milhares = parseInt(inteiros/1000);
+	 inteiros = inteiros % 1000; 
+	 
+	 var retorno = "";
+	 
+	 if(milhares>0){
+	  retorno = milhares+""+separador_milhar+""+retorno
+	  if(inteiros == 0){
+	   inteiros = "000";
+	  } else if(inteiros < 10){
+	   inteiros = "00"+inteiros; 
+	  } else if(inteiros < 100){
+	   inteiros = "0"+inteiros; 
+	  }
+	 }
+	  retorno += inteiros+""+separdor_decimal+""+centavos;
+	 
+	 return retorno;
+ 
+	}
+
+
+  	var spConfigIndex = 0;
+	Event.observe(window, "load", function() {
+		carregaParc();
+	}); 
+	
+	jQuery(document).ready(function(){ 
+		jQuery('.catalog-product-view').each(function(){
+	    	jQuery('.swatch').click(function(){  
+	    		carregaParc();    		
+			}); 
+		});  
+	});
+</script> 
+
+<?php endif; ?> 

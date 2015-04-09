@@ -1,0 +1,35 @@
+.parcelado .vezes {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.parcelado .totalparc{
+	display: inline-block;
+	color: #3399cc;
+	font-size: 14px;
+}
+
+.parcelado  span.boleto {
+	display: inline-block;
+	color: #3399cc;
+	font-size: 14px; 
+}
+
+.parcelado  .sem-juros {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.parcelado  .no-boleto {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+}
+
+.parcelado  .boleto-ou {
+	display: inline-block;
+	font-size: 12px;
+	font-weight: bold;
+}

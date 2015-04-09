@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+ ***********************************************************
+ * 
+ * Desenvolvido em Soul Marketing
+ *
+ *
+ * @category    Soulmkt
+ * @package     Soulmkt_Parcelas
+ * @author      Cristhian Andrade (cristhian@soulmkt.com.br)
+ * 
+ * 
+ ***********************************************************
+-->
+<config>
+    <modules>
+        <Soulmkt_Parcelas>
+            <active>true</active>
+            <codePool>local</codePool>
+        </Soulmkt_Parcelas> 
+    </modules>
+</config>

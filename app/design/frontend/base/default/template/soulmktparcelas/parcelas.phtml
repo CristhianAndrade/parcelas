@@ -1,0 +1,79 @@
+<?php //echo $this->getChildHtml('child'.$this->getProduct()->getId()); ?> 
+ 
+<?php if($this->enabled()): ?>
+	
+<div class="parcelado" >
+	<?php
+		//$valor_minimo =  $this->getLayout()->getBlockSingleton('parcelas/scriptparcelas')->getMinParcelas();
+		//$_max_parcelas = $this->getLayout()->getBlockSingleton('parcelas/scriptparcelas')->getMaxParcelas();
+		$valor_minimo =  $this->getMinParcelas();
+		$_max_parcelas = $this->getMaxParcelas(); 
+
+		$_product = $this->product; 
+		
+		//preço do do produto special
+		$capital2 = $_product->getFinalPrice();
+		
+		//preço do produto
+		$capital1 = $_product->getPrice();
+
+ 		if ($capital2 != null)
+			$capital = $capital2;
+	    else
+        	$capital = $capital1;
+ 
+ 		//capital fica com o special price se este existir
+
+		$nParcelas = $_max_parcelas;
+		if($capital > $valor_minimo)
+		{
+			$parcPossiveis = floor($capital / $valor_minimo);	  
+		}
+		elseif($capital <= $valor_minimo) 
+		{
+			$parcPossiveis = 1;
+			//assume que o usuário deverá pagar "a vista" o produto 
+		}
+
+		//se o n�mero de parcelas poss�veis for maior que o m�nimo ele assume o valor 10 como n�mero de parcelas
+		if ($parcPossiveis < $nParcelas) {
+		    $nParcelas = $parcPossiveis;
+		}
+
+		//o par maior problema que est� ocorrendo
+		$parmaior =number_format($capital /$nParcelas,2,',','.');
+
+		//imprimindo somente o par maior
+
+		$boleto = $capital  - ($capital * ($this->getDescontoBoleto() / 100));
+		$cartao =number_format($capital /$nParcelas,2,',','.'); 
+	?>
+
+	<?php
+	
+		$msgValorParcelas = '<span class="vezes" >'.$this->__('In up to %sx', $nParcelas).'</span>';
+		 
+		$msgValorParcelado = ' <span class="totalparc">'.$this->getSymbol().$parmaior.'</span>
+		<span class="sem-juros"> '.$this->__('without interest').' </span>';
+
+		$msgBoleto = '<span class="boleto">'.$this->getSymbol().number_format($boleto,2,',','.').'</span>
+		<span class="no-boleto">'.$this->__('on billet').'</span>'; 
+	
+		if($parcPossiveis == 1) 
+		{
+			if($this->getDescontoBoleto())
+				echo $msgBoleto;
+			
+		}
+		elseif($parcPossiveis > 1)
+		{
+			echo $msgValorParcelas;
+			echo $msgValorParcelado;
+			if($this->getDescontoBoleto())
+				echo '<p> <span class="boleto-ou">'.$this->__('or').'</span> '.$msgBoleto.'</p>';
+		}
+	?> 
+	 
+</div>
+ 
+<?php endif; ?>
