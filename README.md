@@ -2,6 +2,8 @@
 
 Adicionar a seguiente tag dentro do price.phtml
 
+--Versão 1.2.1
+
 <?php
 	echo $this->getLayout()->createBlock('parcelas/scriptparcelas')
 	->setData('product', $_product)
