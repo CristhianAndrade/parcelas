@@ -17,6 +17,7 @@
         <Soulmkt_Parcelas>
             <active>true</active>
             <codePool>local</codePool>
+            <version>1.2.2</version>
         </Soulmkt_Parcelas> 
     </modules>
 </config>
