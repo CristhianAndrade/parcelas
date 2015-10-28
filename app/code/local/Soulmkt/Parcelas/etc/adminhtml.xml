@@ -8,7 +8,7 @@
               <children>
                 <config>
                   <children>
-                    <soulmkt_parcelas  translate="title" module="soulmkt_parcelas">
+                    <soulmkt_parcelas  translate="title" module="parcelas">
                       <title>SOULMKT - Stallments</title>
                     </soulmkt_parcelas>
                   </children>
