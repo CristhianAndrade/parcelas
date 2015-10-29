@@ -16,7 +16,7 @@ ________________________________________________________________________________
 __________________________________________________________________________________
 
 Não se esqueça de ativar e configurar o mesmo dentro da administração dentro de
-GERAL >  Cris Installments (SoulMKT Parcelas)
+GERAL >  Cris Installments (Cris Parcelas)
 
 
 thanks
