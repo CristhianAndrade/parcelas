@@ -1,6 +1,6 @@
 <?php
 
-class Soulmkt_Parcelas_Model_Observer
+class Cris_Parcelas_Model_Observer
 {
 	private static $contador = 0;
 	 
@@ -23,7 +23,7 @@ class Soulmkt_Parcelas_Model_Observer
 	            /*set child for block*/
 				$_block->setChild('child'.$_child->getProduct()->getId(), $_child); 
 	            /*set our template*/  
-	            $_block->setTemplate('soulmktparcelas/parcelas.phtml');
+	            $_block->setTemplate('crisparcelas/parcelas.phtml');
 				
 				if(Mage::registry('current_product')) 
 				{

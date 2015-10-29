@@ -5,19 +5,19 @@
  * Desenvolvido em Soul Marketing
  *
  *
- * @category    Soulmkt
- * @package     Soulmkt_Parcelas
- * @author      Cristhian Andrade (cristhian@soulmkt.com.br)
+ * @category    Cris
+ * @package     Cris_Parcelas
+ * @author      Cristhian Andrade (cristhian@cris.com.br)
  * 
  * 
  ***********************************************************
 -->
 <config>
     <modules>
-        <Soulmkt_Parcelas>
+        <Cris_Parcelas>
             <active>true</active>
             <codePool>local</codePool>
             <version>1.2.2</version>
-        </Soulmkt_Parcelas> 
+        </Cris_Parcelas> 
     </modules>
 </config>

@@ -10,13 +10,13 @@ ________________________________________________________________________________
 <?php
 	echo $this->getLayout()->createBlock('parcelas/scriptparcelas')
 	->setData('product', $_product)
-	->setTemplate('soulmktparcelas/parcelas.phtml')->toHtml();
+	->setTemplate('crisparcelas/parcelas.phtml')->toHtml();
 ?>
 
 __________________________________________________________________________________
 
 Não se esqueça de ativar e configurar o mesmo dentro da administração dentro de
-GERAL >  Soulmkt Installments (SoulMKT Parcelas)
+GERAL >  Cris Installments (SoulMKT Parcelas)
 
 
 thanks

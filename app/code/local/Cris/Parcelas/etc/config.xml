@@ -2,28 +2,28 @@
   
 <config>
     <modules>
-        <Soulmkt_Parcelas>
+        <Cris_Parcelas>
             <version>1.2.2</version>
-        </Soulmkt_Parcelas>
+        </Cris_Parcelas>
     </modules>
     <global>
         <helpers>
             <parcelas>
-                <class>Soulmkt_Parcelas_Helper</class>
+                <class>Cris_Parcelas_Helper</class>
             </parcelas>
         </helpers>
 
      	<blocks>
 			<parcelas>
-				<class>Soulmkt_Parcelas_Block</class>
+				<class>Cris_Parcelas_Block</class>
         	</parcelas>
       	</blocks>
       	
 
         <models> 
-            <soulmkt_parcelas>
-                <class>Soulmkt_Parcelas_Model</class>
-            </soulmkt_parcelas>
+            <cris_parcelas>
+                <class>Cris_Parcelas_Model</class>
+            </cris_parcelas>
         </models>
 
     </global>
@@ -33,29 +33,29 @@
 		<layout>
 		  <updates>
 			<parcelas>
-			  <file>soulmktparcelas.xml</file>
+			  <file>crisparcelas.xml</file>
 			</parcelas>
 		  </updates> 
 		</layout>
 		
 		 <translate>
             <modules>
-                <soulmkt_parcelas>
+                <cris_parcelas>
                     <files>
-                        <default>soulmktparcelas.csv</default>
+                        <default>crisparcelas.csv</default>
                     </files>
-                </soulmkt_parcelas>
+                </cris_parcelas>
             </modules>
         </translate>
 		
 		<!--<events>
             <core_block_abstract_to_html_before>
                 <observers>
-                    <soulmkt_parcelas>
+                    <cris_parcelas>
                         <type>model</type> 
-                        <class>soulmkt_parcelas/observer</class>
+                        <class>cris_parcelas/observer</class>
                         <method>insertBlock</method>
-                    </soulmkt_parcelas>
+                    </cris_parcelas>
                 </observers> 
             </core_block_abstract_to_html_before>
      </events>-->
@@ -64,11 +64,11 @@
  	<adminhtml>
  		<translate>
             <modules>
-                <soulmkt_parcelas>
+                <cris_parcelas>
                     <files>
-                        <default>soulmktparcelas.csv</default>
+                        <default>crisparcelas.csv</default>
                     </files>
-                </soulmkt_parcelas>
+                </cris_parcelas>
             </modules>
         </translate> 
     </adminhtml>

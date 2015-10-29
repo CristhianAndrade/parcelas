@@ -1,18 +1,18 @@
 <?xml version="1.0"?>
 <config>
     <tabs>
-        <soulmkt module="parcelas" translate="label">
-          <label>Soulmkt Extensions</label>
+        <cris module="parcelas" translate="label">
+          <label>Cris Extensions</label>
           <sort_order>200</sort_order>
           <show_in_default>1</show_in_default>
           <show_in_website>0</show_in_website>
           <show_in_store>0</show_in_store>
-        </soulmkt> 
+        </cris> 
     </tabs>
     <sections>
-        <soulmkt_parcelas translate="label">
-            <label>Soulmkt Installment</label>
-            <tab>soulmkt</tab>
+        <cris_parcelas translate="label">
+            <label>Cris Installment</label>
+            <tab>cris</tab>
             <frontend_type>text</frontend_type>
             <sort_order>2000</sort_order>
             <show_in_default>1</show_in_default>
@@ -88,6 +88,6 @@
                     </fields>
                 </parcelas>
             </groups>
-        </soulmkt_parcelas>
+        </cris_parcelas>
     </sections>
 </config>

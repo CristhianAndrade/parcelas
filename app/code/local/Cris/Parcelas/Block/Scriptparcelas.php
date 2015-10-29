@@ -1,12 +1,12 @@
 <?php
-class Soulmkt_Parcelas_Block_ScriptParcelas extends Mage_Core_Block_Template
+class Cris_Parcelas_Block_ScriptParcelas extends Mage_Core_Block_Template
 { 
-	 const ENABLED       	= 'soulmkt_parcelas/parcelas/enabled';
-     const MAXIMO_PARCELAS  = 'soulmkt_parcelas/parcelas/maxima_parcelas';
-     const MINIMO_PARCELAS  = 'soulmkt_parcelas/parcelas/minimo_parcelas';
-	 const ENABLED_CJM    	= 'soulmkt_parcelas/parcelas/clique_cjm'; 
-	 const DESCONTO_BOLETO    	= 'soulmkt_parcelas/parcelas/desconto_boleto';
-	 //const PRICE_AUTO    	=  'soulmkt_parcelas/parcelas/add_price';
+	 const ENABLED       	= 'cris_parcelas/parcelas/enabled';
+     const MAXIMO_PARCELAS  = 'cris_parcelas/parcelas/maxima_parcelas';
+     const MINIMO_PARCELAS  = 'cris_parcelas/parcelas/minimo_parcelas';
+	 const ENABLED_CJM    	= 'cris_parcelas/parcelas/clique_cjm'; 
+	 const DESCONTO_BOLETO    	= 'cris_parcelas/parcelas/desconto_boleto';
+	 //const PRICE_AUTO    	=  'cris_parcelas/parcelas/add_price';
 	 
      public function methodblock()
      {

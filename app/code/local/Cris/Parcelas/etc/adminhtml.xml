@@ -8,9 +8,9 @@
               <children>
                 <config>
                   <children>
-                    <soulmkt_parcelas  translate="title" module="parcelas">
-                      <title>SOULMKT - Stallments</title>
-                    </soulmkt_parcelas>
+                    <cris_parcelas  translate="title" module="parcelas">
+                      <title>CRIS - Stallments</title>
+                    </cris_parcelas>
                   </children>
                 </config>
               </children>
